@@ -1,0 +1,248 @@
+*,
+html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+:root {
+  --primary: #2F401A;
+  --secondary: #4A6024;
+  --olive: #656D3F;
+  --sage: #818058;
+  --background: #FAF2E6;
+  --cream: #F0E7D1;
+  --beige: #D1D0B7;
+  --accent: #D3A15F;
+  --text: #2F401A;
+  --white: #FFFFFF;
+}
+body{
+    background-color: var(--background);
+    color: var(--text);
+    padding-bottom: 60px;
+}
+nav{
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--cream);
+}
+
+.brand > img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+
+}
+
+nav > .brand{
+    color: var(--cream);
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* baagian hero */
+.hero-section {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 7%;
+}
+
+.hero-section > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-descriptions{
+    font-size: 25px;
+    color: var(--text);
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    margin-right: 350px;
+    margin-bottom: 200px;
+    margin-top: 230px;
+}
+
+.hero-text{
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.btn-pesan{
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background: var(--secondary);
+    color: var(--white);
+    border: 2px solid var(--text);
+    border-radius: 80px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 60px;
+    gap: 12px;
+    padding: 15px 28px;
+    box-shadow:
+     0 8px 0 var(--olive),
+    0 12px 22px rgba(40, 122, 75, 0.25);
+    margin-top: 120px;
+}
+
+/* bagaian menu */
+.menu {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #fff8f0;
+}
+
+.menu h1 {
+  color: #59483e;
+}
+
+.menu h4 {
+  color: #8b786b;
+  font-weight: normal;
+}
+
+/* Tempat kartu menu */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Kartu makanan */
+.klepon,
+.cincau {
+  width: 250px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* Gambar */
+.klepon img,
+.cincau img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Nama */
+.klepon h3,
+.cincau h3 {
+  color: #59483e;
+}
+
+/* Harga */
+.klepon p,
+.cincau p {
+  color: #829477;
+  font-weight: bold;
+}
+
+/* Tombol */
+.klepon button,
+.cincau button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #c8d9c0;
+  cursor: pointer;
+}
+
+/* Hover */
+.klepon button:hover,
+.cincau button:hover {
+  background-color: #829477;
+  color: white;
+}
+/* FOOTER */
+.footer {
+    background-color: #f8f8f3;
+    padding: 50px 12% 20px;
+    color: #183f2b;
+}
+
+/* CONTENT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* DESKRIPSI */
+.footer-info h3 {
+    color: #356b45;
+    margin-bottom: 12px;
+}
+
+.footer-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 350px;
+}
+
+/* SOCIAL MEDIA */
+.footer-social h4 {
+    margin-bottom: 15px;
+}
+
+.social-link {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link a {
+    color: #356b45;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-link a:hover {
+    color: #183f2b;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-top: 20px;
+    color: #888;
+    font-size: 13px;
+}
+
