@@ -62,7 +62,7 @@ nav > .brand{
     gap: 10px;
 }
 
-/* bagian hero */
+/* baagian hero */
 .hero-section {
     width: 100%;
     height: 550px;
@@ -119,4 +119,130 @@ nav > .brand{
 }
 
 /* bagaian menu */
- 
+.menu {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #fff8f0;
+}
+
+.menu h1 {
+  color: #59483e;
+}
+
+.menu h4 {
+  color: #8b786b;
+  font-weight: normal;
+}
+
+/* Tempat kartu menu */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Kartu makanan */
+.klepon,
+.cincau {
+  width: 250px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+/* Gambar */
+.klepon img,
+.cincau img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Nama */
+.klepon h3,
+.cincau h3 {
+  color: #59483e;
+}
+
+/* Harga */
+.klepon p,
+.cincau p {
+  color: #829477;
+  font-weight: bold;
+}
+
+/* Tombol */
+.klepon button,
+.cincau button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #c8d9c0;
+  cursor: pointer;
+}
+
+/* Hover */
+.klepon button:hover,
+.cincau button:hover {
+  background-color: #829477;
+  color: white;
+}
+/* FOOTER */
+.footer {
+    background-color: #f8f8f3;
+    padding: 50px 12% 20px;
+    color: #183f2b;
+}
+
+/* CONTENT */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* DESKRIPSI */
+.footer-info h3 {
+    color: #356b45;
+    margin-bottom: 12px;
+}
+
+.footer-info p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 350px;
+}
+
+/* SOCIAL MEDIA */
+.footer-social h4 {
+    margin-bottom: 15px;
+}
+
+.social-link {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link a {
+    color: #356b45;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-link a:hover {
+    color: #183f2b;
+}
+
+/* COPYRIGHT */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding-top: 20px;
+    color: #888;
+    font-size: 13px;
+}
+
