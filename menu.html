@@ -1,110 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - Klepon Legend</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-<!-- NAVIGASI -->
+  <!-- NAVIGASI -->
   <nav class="navbar">
     <div class="brand">
-      <img src="asset/kleponlogo.png" >
+      <img src="asset/kleponlogo.png" alt="Logo Klepon Legend">
       <h3>Klepon Legend</h3>
     </div>
     <ul>
       <li><a href="index.html">BERANDA</a></li>
       <li><a href="menu.html">MENU</a></li>
       <li><a href="tentang.html">TENTANG</a></li>
-      <li><a href="#">KONTAK</a></li>
+      <li><a href="kontak.html">KONTAK</a></li>
     </ul>
   </nav>
 
-<section class="menu">
-  <div class="menu-head">
+  <section class="menu">
+    <div class="menu-head">
+      <div class="menu-judul">
+        <h1>Menu Tersedia</h1>
+        <h4>Pilihan Tradisional</h4>
+      </div>
 
-    <div class="menu-judul">
-    <h1>Menu Tersedia</h1>
-    <h4>Pilihan Tradisional</h4>
-  </div>
-  
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Telusuri Menu...">
-    <button onclick="cariMenu()">Search</button>
-</div>
-
-  </div>
-
-<div class="pisah">
-  <button class="makanan">Makanan</button>
-  <button class="minuman">Minuman</button>
-</div>
-
-    <div class="klepon">
-      <img src="asset/klepon.jpeg" alt="Klepon">
-      <h3>Klepon</h3>
-      <p>Rp 20.000</p>
-      <button>Pesan</button>
-
+      <div class="search-box">
+        <!-- fitur search -->
+        <input type="text" id="searchInput" placeholder="Telusuri Menu...">
+        <button type="button">Search</button>
+      </div>
     </div>
-    <div class="jajeputih">
-      <img src="asset/jajeputih.jpeg" alt="Jaje Putih">
-      <h3>Sumping Pisang</h3>
-      <p>Rp 3.000</p>
-      <button>Pesan</button>
-    </div>
-    <div class="jajeungu">
-      <img src="asset/jajeungu.jpeg" alt="Jaje Ungu">
-      <h3>Jaje Bendu</h3>
-      <p>Rp 3.000</p>
-      <button>Pesan</button>
-    </div>
-    <div class="rujak">
-      <img src="asset/esrujak.png" alt="Es Rujak">
-       <h3>Es Rujak</h3>
-      <p>Rp 10.000</p>
-      <button>Pesan</button>
-    </div>
-    <div class="cincau">
-      <img src="asset/cincau.jpeg" alt="Es Cincau">
-      <h3>Es Cincau</h3>
-      <p>Rp 10.000</p>
-      <button>Pesan</button>
-    </div>
-<!-- FOOTER -->
-<footer class="footer">
 
+    <!-- filter -->
+    <div class="pisah">
+      <button type="button" class="semua active" onclick="filterKategori('semua')">Semua</button>
+      <button type="button" class="makanan" onclick="filterKategori('makanan')">Makanan</button>
+      <button type="button" class="minuman" onclick="filterKategori('minuman')">Minuman</button>
+    </div>
+
+    <div id="daftar-menu" style="display: contents;"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
     <div class="footer-content">
+      <div class="footer-info">
+        <h3>Klepon Legend</h3>
+        <p>
+          Menghadirkan cita rasa klepon tradisional
+          dengan rasa autentik dan bahan berkualitas.
+          Nikmati kelezatan jajanan khas Indonesia.
+        </p>
+      </div>
 
-        <!-- Deskripsi -->
-        <div class="footer-info">
-            <h3>Klepon Legend</h3>
-            <p>
-                Menghadirkan cita rasa klepon tradisional
-                dengan rasa autentik dan bahan berkualitas.
-                Nikmati kelezatan jajanan khas Indonesia.
-            </p>
+      <div class="footer-social">
+        <h4>Ikuti Kami</h4>
+        <div class="social-link">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">TikTok</a>
         </div>
-
-        <!-- Media Sosial -->
-        <div class="footer-social">
-            <h4>Ikuti Kami</h4>
-            <div class="social-link">
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">TikTok</a>
-            </div>
-        </div>
-
+      </div>
     </div>
 
-    <!-- Copyright -->
     <div class="footer-bottom">
-        <p>© 2026 Klepon Legend. All Rights Reserved.</p>
+      <p>© 2026 Klepon Legend. All Rights Reserved.</p>
     </div>
+  </footer>
 
-</footer>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
