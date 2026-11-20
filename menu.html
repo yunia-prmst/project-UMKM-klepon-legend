@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,17 +31,16 @@
       </div>
 
       <div class="search-box">
-        <!-- fitur search -->
-        <input type="text" id="searchInput" placeholder="Telusuri Menu...">
-        <button type="button">Search</button>
+        <input type="text" id="searchInput" onkeyup="cariMenu()" placeholder="Telusuri Menu...">
+        <button type="button" onclick="cariMenu()">Search</button>
       </div>
     </div>
 
     <!-- filter -->
     <div class="pisah">
-      <button type="button" class="semua active">Semua</button>
-      <button type="button" class="makanan">Makanan</button>
-      <button type="button" class="minuman">Minuman</button>
+      <button type="button" class="semua active" onclick="filterKategori('semua')">Semua</button>
+      <button type="button" class="makanan" onclick="filterKategori('makanan')">Makanan</button>
+      <button type="button" class="minuman" onclick="filterKategori('minuman')">Minuman</button>
     </div>
 
     <div id="daftar-menu" style="display: contents;"></div>

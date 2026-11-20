@@ -4,7 +4,7 @@ const dataMenu = [
         id: 1,
         nama: "Klepon",
         kategori: "makanan",
-        harga: 20000,
+        harga: 1000,
         gambar: "asset/klepon.jpeg",
         classCss: "klepon"
     },
@@ -48,12 +48,17 @@ function tampilkanMenu(listMenu) {
     if (!container) return;
     container.innerHTML = "";
 
+    if (listMenu.length === 0) {
+        container.innerHTML = `<p style="margin: 30px 0;">Menu tidak ditemukan.</p>`;
+        return;
+    }
+
     listMenu.forEach(item => {
         container.innerHTML += `
       <div class="${item.classCss}">
         <img src="${item.gambar}" alt="${item.nama}">
         <h3>${item.nama}</h3>
-        <p>Rp ${item.harga.toLocaleString("id-ID")}</p>
+        <p>Rp ${item.harga.toLocaleString("id-ID")}/pcs</p>
         <button type="button">Pesan</button>
       </div>
     `;
@@ -63,3 +68,23 @@ function tampilkanMenu(listMenu) {
 document.addEventListener("DOMContentLoaded", () => {
     tampilkanMenu(dataMenu);
 });
+
+// fitur search
+function cariMenu() {
+    const kataKunci = document.getElementById("searchInput").value.toLowerCase();
+    const hasil = dataMenu.filter(item => item.nama.toLowerCase().includes(kataKunci));
+    tampilkanMenu(hasil);
+}
+
+// fitur filter kategori
+function filterKategori(kategori, tombol) {
+    document.querySelectorAll(".pisah button").forEach(btn => btn.classList.remove("active"));
+    if (tombol) tombol.classList.add("active");
+
+    if (kategori === "semua") {
+        tampilkanMenu(dataMenu);
+    } else {
+        const hasil = dataMenu.filter(item => item.kategori === kategori);
+        tampilkanMenu(hasil);
+    }
+}
