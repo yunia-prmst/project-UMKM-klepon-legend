@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,17 +31,16 @@
       </div>
 
       <div class="search-box">
-        <!-- fitur search -->
-        <input type="text" id="searchInput" placeholder="Telusuri Menu...">
-        <button type="button">Search</button>
+        <input type="text" id="searchInput" onkeyup="cariMenu()" placeholder="Telusuri Menu...">
+        <button type="button" onclick="cariMenu()">Search</button>
       </div>
     </div>
 
     <!-- filter -->
     <div class="pisah">
-      <button type="button" class="semua active">Semua</button>
-      <button type="button" class="makanan">Makanan</button>
-      <button type="button" class="minuman">Minuman</button>
+      <button type="button" class="semua active" onclick="filterKategori('semua')">Semua</button>
+      <button type="button" class="makanan" onclick="filterKategori('makanan')">Makanan</button>
+      <button type="button" class="minuman" onclick="filterKategori('minuman')">Minuman</button>
     </div>
 
     <div id="daftar-menu" style="display: contents;"></div>
@@ -74,6 +74,34 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="modalPesan" class="modal">
+  <div class="modal-isi">
+    <span class="tutup" onclick="tutupModal()">&times;</span>
+    <img id="fotoProduk" src="" alt="Produk">
+    <h3 id="namaProduk">Nama Menu</h3>
+    <p id="hargaProduk">Rp 0/pcs</p>
+
+    <div class="form-grup">
+      <label>Nama Pemesan</label>
+      <input type="text" id="namaPemesan" placeholder="Tulis nama Anda">
+    </div>
+
+    <div class="form-grup">
+      <label>Jumlah Pesanan</label>
+      <input type="number" id="jumlahPesan" value="1" min="1" oninput="hitungTotal()">
+    </div>
+
+    <div class="form-grup">
+      <label>Catatan</label>
+      <input type="text" id="catatanPesan" placeholder="Opsional">
+    </div>
+
+    <p class="total-teks">Total: <span id="totalHarga">Rp 0</span></p>
+    <button type="button" class="btn-wa" onclick="kirimWhatsApp()">Pesan via WA</button>
+  </div>
+</div>
+
 </body>
 
 </html>
