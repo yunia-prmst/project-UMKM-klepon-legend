@@ -21,6 +21,7 @@ body{
     background-color: var(--background);
     color: var(--text);
 }
+
 nav{
     background-color: var(--primary);
     border-bottom: 1px solid var(--white);
@@ -38,6 +39,7 @@ nav ul{
     align-items: center;
     list-style: none;
     gap: 2rem;
+    margin: 10px 50px;
 }
 nav ul li a{
     text-decoration: none;
@@ -59,6 +61,11 @@ nav > .brand{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 10px 50px;
+}
+
+.brand > nav > ul{
+    margin: 10px 0;
 }
 
 /* baagian hero */
@@ -88,9 +95,10 @@ nav > .brand{
     position: relative;
     z-index: 1;
     text-align: left;
-    margin-right: 350px;
+    margin-right: 0px;
     margin-bottom: 200px;
     margin-top: 230px;
+    width: 55%;
 }
 
 .hero-text{
@@ -822,4 +830,187 @@ nav > .brand{
 
 .btn-wa:hover {
     background-color: var(--primary);
+}
+
+/* responsive tampilan */
+/* laptop */
+ @media screen and (min-width: 769px) and (max-width: 1366px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img, iframe {
+        max-width: 100%;
+    }
+
+    /* NAVBAR */
+    nav {
+        padding: 20px 4%;
+    }
+
+    .brand,
+    nav ul {
+        margin: 10px 5%;
+    }
+
+    nav ul {
+        gap: 25px;
+    }
+
+    /* HERO */
+    .hero-section {
+        width: 100%;
+        height: 550px;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 15%;
+    }
+
+    .hero-descriptions {
+        width: 55%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .hero-text {
+        text-align: left;
+    }
+
+    .btn-pesan {
+        margin-top: 30px;
+    }
+
+    /* MENU */
+    .search-box,
+    .pisah {
+        margin-left: 0;
+    }
+
+    .klepon,
+    .jajeputih,
+    .jajeungu,
+    .rujak,
+    .cincau {
+        width: 29%;
+        margin: 1%;
+    }
+
+    /* SECTION */
+    .tentang-content,
+    .lokasi-content {
+        gap: 30px;
+    }
+
+    .tentang-content img,
+    .lokasi-image img {
+        max-width: 100%;
+    }
+
+    /* CARD */
+    .keunggulan-container,
+    .kontak-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 50px 7% 20px;
+    }
+}
+/* hp */
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img, iframe {
+        max-width: 100%;
+    }
+
+    /* NAVBAR */
+    nav {
+        padding: 12px 5%;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        gap: 12px;
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        margin: 10px 0;
+    }
+
+    /* HERO */
+    .hero-section {
+        height: 450px;
+        padding: 0 7%;
+        justify-content: flex-start;
+    }
+
+    .hero-descriptions {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+
+    .hero-descriptions h1 {
+        font-size: 28px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .btn-pesan {
+        margin-top: 25px;
+    }
+
+    /* MENU */
+    .search-box,
+    .pisah {
+        margin-left: 0;
+    }
+
+    .klepon,
+    .jajeputih,
+    .jajeungu,
+    .rujak,
+    .cincau {
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* SECTION */
+    .tentang-content,
+    .lokasi-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* CARD */
+    .keunggulan-container,
+    .kontak-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 35px 7% 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+    }
 }
